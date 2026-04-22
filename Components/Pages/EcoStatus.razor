@@ -1,0 +1,32 @@
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components
+
+<div class="eco-card">
+    <h3>@Titulo</h3>
+
+    <p style="color:@CorTexto">
+        Total acumulado: @Total
+    </p>
+
+    <button @onclick="RegistrarAcao">
+        Registrar ação (+@Peso)
+    </button>
+</div>
+
+@code {
+    [Parameter]
+    public string Titulo { get; set; } = string.Empty;
+
+    [Parameter]
+    public int Peso { get; set; }
+
+    private int Total = 0;
+    private int Meta = 50;
+
+    private string CorTexto => Total >= Meta ? "green" : "black";
+
+    private void RegistrarAcao()
+    {
+        Total += Peso;
+    }
+}
