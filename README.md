@@ -2,7 +2,7 @@
 
 # 📘 Projeto - Componente Reutilizável em Blazor
 
-* Nome: Gabriel Ribeiro
+* Nome: Gabriel Ribeiro Arantes dos Santos
 * Curso: Análise e Desenvolvimento de Sistemas
 
 ---
